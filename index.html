@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <header>
-        <img id="github-logo" src="path/to/your/image.jpg" alt="Logo de GitHub">
-        <input type="text" id="search" placeholder="Buscar proyectos...">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="grid">
+            <figure>
+                <img
+                id="github-logo"
+                src="https://avatars.githubusercontent.com/u/83027826?s=400&u=92705ddcbc17ac06b6258b5045574d663b7fa557&v=4"
+                alt="Logo de GitHub"
+                
+              />
+            </figure>
+          <div>
+            <h1>IsaccWebDev</h1>
+            <p>
+              Soy un administrador de servidores y programador Python con una
+              pasión por la tecnología y la automatización. Con varios años de
+              experiencia en la gestión de infraestructuras de TI, mi objetivo es
+              crear soluciones eficientes y seguras para diversos problemas
+              técnicos. Disfruto trabajando en proyectos que involucran la
+              administración de servidores, scripting, y el desarrollo backend.
+              Actualemente me encuentro como DevOps Junior.
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <input type="text" id="search" placeholder="Buscar proyectos..." />
+        </div>
       </header>
-      
+
       <section id="projects">
         <!-- Los proyectos se agregarán dinámicamente aquí -->
       </section>
-    
+    </main>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
