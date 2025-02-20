@@ -1,6 +1,7 @@
 const $ = selector => document.querySelector(selector);
 const searchInput = $('#search');
 const projectsContainer = $('#projects');
+const loadingElement = $('#loading');
 let proyectos = []; // Variable global para almacenar los proyectos
 
 // Llamada a la API
@@ -10,7 +11,7 @@ const fetchProyectos = async () => {
   const reposData = await repos.json();
 
   const proyectosTemp = [];
-
+  loadingElement.style.display = "block";
   for (let repo of reposData) {
     try {
       const readme = await fetch(repo.contents_url.replace('{+path}', 'README.md'));
@@ -29,6 +30,9 @@ const fetchProyectos = async () => {
       }
     } catch (error) {
       console.error(`Error al procesar el repositorio ${repo.name}:`, error);
+    }finally {
+        
+        loadingElement.style.display = "none";
     }
   }
 
